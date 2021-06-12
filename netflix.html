@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix | Landing page UI Design</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" 
+    integrity="undefined" crossorigin="anonymous">
+    <link rel="stylesheet" href="netflix.css">
+</head>
+<body>
+    <header>
+    <a href="#" class="logo"><img src="logo.jpeg"></a>
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">My List</a></li>
+
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    </header>
+    <div class="banner">
+        <img src="bgimage.jpeg" class="bg">
+
+        <div class="content">
+            <img src="name.png" class="movieTital">
+            <h4>
+                <span>2021</span>
+                <span><i>18+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ratione et ipsa. Doloribus, asperiores! Corporis, 
+                fuga minus quos pariatur consequatur vero, corrupti consectetur molestiae in, sint fugit voluptas explicabo quae.</p>
+                <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> My List</a>
+                </div>
+
+                <div class="keshav">
+                    <h4>Designed by Keshav Kumar</h4>
+                    <a href="https://www.instagram.com/officialkeshavkumar/">Instagram profile</a>
+                </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png">Watch Trailer</a>
+    </div>
+
+    
+
+    <div class="trailer">
+        <video src="Disney's Mulan _ Official Trailer.mp4" controls="true"></video>
+        <img src="close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
